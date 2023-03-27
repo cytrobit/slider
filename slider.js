@@ -1,5 +1,3 @@
-let counter = 0;
-
 const data = [
   {
     sentence: 'No matter what...',
@@ -23,3 +21,18 @@ const data = [
   }
 ];
 
+let counter = 0;
+const image = document.querySelector('img');
+const paragraph = document.querySelector('p');
+
+function changeSlide() {
+  counter++;
+  if(counter > data.length - 1) {
+    counter = 0;
+  }
+  // console.log(data.length)
+  image.src = data[counter].photo;
+  paragraph.textContent = data[counter].sentence;
+}
+
+setInterval(changeSlide, 3000);
