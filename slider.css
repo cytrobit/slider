@@ -43,6 +43,45 @@ body {
   color: rgb(180, 45, 45);
   text-shadow: 0 0 3px black;
   letter-spacing: 3px;
+  animation: animationText 3s linear infinite;
 }
 
+@keyframes animationText {
+  0% {
+    opacity: 0.5;
+    transform: translate(-10%) scale(1);
+  }
 
+  80% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes animationImg {
+  0% {
+    opacity: 0.3;
+    transform: scale(1) translate(0);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.05) translate(-20px);
+  }
+}
