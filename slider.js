@@ -25,6 +25,28 @@ let counter = 0;
 const image = document.querySelector('img');
 const paragraph = document.querySelector('p');
 
+const rightArrow = document.querySelector(".buttonRight");
+const leftArrow = document.querySelector(".buttonLeft");
+
+rightArrow.addEventListener("click", () => {
+  counter++;
+  if (counter > data.length - 1) {
+    counter = 0;
+  }
+    image.src = data[counter].photo;
+    paragraph.textContent = data[counter].sentence;
+});
+
+
+leftArrow.addEventListener("click", () => {
+  counter--;
+  if (counter < 0) {
+    counter = data.length - 1;
+  }
+    image.src = data[counter].photo;
+    paragraph.textContent = data[counter].sentence;
+});
+
 function changeSlide() {
   counter++;
   if(counter > data.length - 1) {

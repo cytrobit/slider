@@ -46,6 +46,42 @@ body {
   animation: animationText 3s linear infinite;
 }
 
+.slider .buttonLeft {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.424);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.4s;
+}
+
+.slider .buttonRight {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.424);
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.4s;
+}
+
+.slider .buttonLeft:hover, .slider .buttonRight:hover {
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
 @keyframes animationText {
   0% {
     opacity: 0.5;
